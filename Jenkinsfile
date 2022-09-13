@@ -22,7 +22,7 @@ pipeline {
                                 configName: 'staging',
                                 sshCredentials: [
                                     username: "$USERNAME",
-                                    encryptedPassPharse: "$USERPASS"
+                                    encryptedPassPhrase: "$USERPASS"
                                 ]
                                 transfers:(
                                     sshTransfer(
