@@ -9,7 +9,7 @@ pipeline {
             }
         }
 
-        stage('DeployToStagin') {
+        stage('DeployToStaging') {
             when {
                 branch 'master'
             }
