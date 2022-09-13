@@ -22,14 +22,14 @@ pipeline {
                                 configName: 'staging',
                                 sshCredentials: [
                                     username: "$USERNAME",
-                                    encryptedPassPhrase: "$USERPASS"
+                                    encryptedPassphrase: "$USERPASS"
                                 ]
                                 transfers:(
                                     sshTransfer(
                                         sourceFiles: 'dist/trainSchedule.zip',
-                                        removeprefix: 'dist/',
+                                        removePrefix: 'dist/',
                                         remoteDirectory: '/tmp',
-                                        execCommand: 'sudo /usr/bin/systemctl stop train-schedule && rm -rf /opt/train-schedule/* && unzip /tmp/train-schedule && sudo /usr/bin/systemctl start train-schedule'
+                                        execCommand: 'sudo /usr/bin/systemctl stop train-schedule && rm -rf /opt/train-schedule/* && unzip /tmp/trainSchedule.zip && sudo /usr/bin/systemctl start train-schedule'
                                     )
                                 ) 
                             )
